@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Totale Foto favorite = {{ favoriteCount }}</h3>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let photo of photos">
+      <app-photo-card
+        [photo]="photo"
+        (delete)="onDeletePhoto($event)"
+        (like)="onLikePhoto(photo)"
+      ></app-photo-card>
+    </div>
+  </div>
+</div>

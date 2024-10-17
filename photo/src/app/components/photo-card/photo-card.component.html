@@ -1,0 +1,12 @@
+<div class="card mb-4">
+  <img
+    [src]="photo.src.medium"
+    alt="{{ photo.photographer }}"
+    class="card-img-top"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ photo.photographer }}</h5>
+    <button class="btn btn-danger" (click)="onDelete()">Elimina</button>
+    <button class="btn btn-success" (click)="onLike()">Mi piace</button>
+  </div>
+</div>

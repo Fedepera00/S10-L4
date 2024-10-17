@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>Foto Favorite</h3>
+  <div class="row" *ngIf="favoritePhotos.length > 0; else noFavorites">
+    <div class="col-md-4" *ngFor="let photo of favoritePhotos">
+      <app-photo-card
+        [photo]="photo"
+        (delete)="onDeletePhoto($event)"
+      ></app-photo-card>
+    </div>
+  </div>
+  <ng-template #noFavorites>
+    <p>Non hai ancora aggiunto foto ai preferiti.</p>
+  </ng-template>
+</div>
